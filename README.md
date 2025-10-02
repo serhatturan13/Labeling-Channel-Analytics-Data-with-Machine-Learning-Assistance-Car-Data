@@ -1,23 +1,24 @@
-## 2. İkinci El Araba Satış Fiyatı Tahmini Projesi README İçeriği
+## 2. Araç Satış Fiyatı Tahmini Projesi README İçeriği
 
 Bu README, regresyon modeli odaklı bir proje için hazırlanmıştır.
 
 ```markdown
-# 🚗 İkinci El Araba Satış Fiyatı Tahmini (Car Sale Price Prediction)
+# 🚗 Araç Satış Fiyatı Tahmini (Automobile Sale Price Prediction)
 
-Bu proje, kapsamlı bir ikinci el araba satış veri setini kullanarak, bir aracın özelliklerine (marka, model, yıl, kilometre, motor gücü vb.) dayanarak piyasa satış fiyatını tahmin eden bir regresyon modeli geliştirmeyi amaçlar.
+Bu proje, kapsamlı bir araç satış veri setini kullanarak, bir aracın özelliklerine (tür,boyut,liste fiyatı,satış fiyatı vb.) dayanarak piyasa satış fiyatını tahmin eden bir regresyon modeli geliştirmeyi amaçlar.
 
 ## 🎯 Proje Amacı
 
-Veri setindeki kategorik ve sayısal özellikleri işleyerek, regresyon algoritmaları (örneğin Lineer Regresyon, Random Forest Regressor) yardımıyla ikinci el araçların fiyatlarını mümkün olan en düşük hata payıyla tahmin etmektir.
+Temel amaç, müşteri özelliklerini ve ürün niteliklerini (boyut, satış fiyatı, liste fiyatı, satış sıklığı) kullanarak anlamlı gruplar (kümeler) oluşturmak ve bu kümeler üzerinden her bir müşteri grubuna en uygun araç türlerini önerecek bir makine öğrenmesi modelinin altyapısını kurmaktır.
 
 ## ✨ Temel Özellikler ve Aşamalar
 
-- **Veri Temizleme:** Aykırı değerlerin (outliers) ve eksik verilerin tespiti ve yönetimi.
-- **Kategorik Veri İşleme:** One-Hot Encoding veya Label Encoding gibi yöntemlerle marka, model, yakıt tipi gibi kategorik değişkenlerin makine öğrenimine hazır hale getirilmesi.
-- **Korelasyon Analizi:** Fiyatı en çok etkileyen özelliklerin belirlenmesi.
-- **Regresyon Modeli Seçimi:** Fiyat tahmininde en iyi performansı veren modelin seçilmesi ve hiperparametre optimizasyonu.
-- **Model Değerlendirmesi:** Ortalama Mutlak Hata (MAE), Ortalama Kare Hata (MSE) ve R-Kare (R²) skorları ile model başarısının ölçülmesi.
+- **Veri Ön İşleme:** Eksik değerlerin yönetilmesi, kategorik özelliklerin (araç türü gibi) sayısal hale getirilmesi.
+- **Özellik Ölçeklendirme:** Kümeleme performansını artırmak için sayısal özelliklerin ölçeklendirilmesi (Standard Scaler, MinMax Scaler).
+- **Müşteri Alışkanlıkları Analizi:** Müşterilerin sipariş sıklığı, tercih ettiği fiyat aralığı ve araç türleri gibi alışkanlıkların çıkarılması.
+- **Kümeleme Modeli (K-Means):** Farklı araç türleri ve müşteri grupları arasında doğal gruplar oluşturmak için K-Means algoritmasının kullanılması.
+- **Optimum Küme Sayısı (Elbow Metodu):** Veri setine en uygun küme sayısının belirlenmesi.
+
 
 ## 🛠️ Kullanılan Teknolojiler ve Kütüphaneler
 
